@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Welcome from "./Welcome.js";
+import Welcome from "./Welcome";
 
 class App extends Component {
   constructor() {
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div>
         {this.state.names.map((name) => (
-          <Welcome name={name} />
+          <Welcome key={name} name={name} />
         ))}
       </div>
     );
